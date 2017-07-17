@@ -13,6 +13,8 @@ namespace WebControlDemo
         {
             if (!(this.IsPostBack))
             {
+
+                Currency.Items.Add(new ListItem("INR", "65"));
                 Currency.Items.Add(new ListItem("Euros", "0.85"));
                 Currency.Items.Add(new ListItem("Japanese Yen", "110.33"));
                 Currency.Items.Add(new ListItem("Canadian Dollars", "1.2"));
@@ -28,11 +30,13 @@ namespace WebControlDemo
                 ListItem LS =  Currency.Items[Currency.SelectedIndex];
                 decimal ConvertedAmount = OriginalAmount * decimal.Parse(LS.Value);
                 Result.InnerText = OriginalAmount + " U.S. dollars = ";
-                Result.InnerText += ConvertedAmount + LS.Text;
+                Result.InnerText += ConvertedAmount + " "+ LS.Text;
+                Result.Style["Color"] = "Blue";
             }
             else
             {
                 Result.InnerText = "The number you typed in was not in the " +"correct format. Use only numbers.";
+                Result.Style["Color"] = "Red";
             }
         }
         protected void ShowGraph_ServerClick(object sender, EventArgs e)
@@ -40,6 +44,17 @@ namespace WebControlDemo
             ListItem LS = Currency.Items[Currency.SelectedIndex];
             Graph.Src = "./images/Dollor2" + LS.Text + ".gif";
             Graph.Visible = true;
+        }
+        protected void HideGraph_ServerClick(object sender, EventArgs e)
+        {
+            
+            Graph.Visible = false;
+        }
+        protected void Selection_Changed(object sender, EventArgs e)
+        {
+            ListItem LS = Currency.Items[Currency.SelectedIndex];
+            Result.InnerText = LS.Text;
+            Graph.Visible = false;
         }
 
     }

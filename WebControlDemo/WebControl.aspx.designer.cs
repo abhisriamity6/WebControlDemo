@@ -31,15 +31,6 @@ namespace WebControlDemo {
         protected global::System.Web.UI.HtmlControls.HtmlSelect Currency;
         
         /// <summary>
-        /// Graph control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage Graph;
-        
-        /// <summary>
         /// Convert control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,24 @@ namespace WebControlDemo {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputSubmit ShowGraph;
+        
+        /// <summary>
+        /// Submit2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputSubmit Submit2;
+        
+        /// <summary>
+        /// Graph control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Graph;
         
         /// <summary>
         /// Result control.
